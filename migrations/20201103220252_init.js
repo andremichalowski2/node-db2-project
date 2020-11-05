@@ -3,12 +3,12 @@ exports.up = function(knex) {
   return knex.schema.createTable('car_specs', tbl => {
     // a primary key, called 'id', unsigned, integer, autoincrementing
     tbl.increments();
-    tbl.integer('VIN', 500).notNullable().unique().index();
-    tbl.string('Make').notNullable();
-    tbl.string('Model').notNullable();
-    tbl.decimal('Mileage', 9, 2).notNullable();
-    tbl.string('Transmission');
-    tbl.string('TitleStatus');
+    tbl.integer('vin', 500).notNullable().unique().index();
+    tbl.string('make').notNullable();
+    tbl.string('model').notNullable();
+    tbl.decimal('mileage', 9, 2).notNullable();
+    tbl.string('transmission');
+    tbl.string('titleStatus');
     /*
     tbl.string('name', 512).notNullable().unique().index();
     tbl.decimal('price', 8, 2);
